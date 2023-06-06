@@ -1,4 +1,4 @@
-# Xarm6 Visual servoing
+# Xarm6 visual servoing
 ## Project Description
 Python project for visual servoing of a 6-DOF XARM robotic arm. An outside camera identifies two QR codes, one with the word 'robot' encoded corresponding to the arm's gripper position, and other with the word 'target' encoding, used to identify the target object's position.
 
