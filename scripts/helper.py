@@ -19,7 +19,6 @@ camera_height = 480
 def process_qr(qr_codes, frame):
     # QR code size in cm
     qr_code_size_robot = 7.2
-    qr_code_size_target = 7.2
     qr_code_size_target = 5.3
     coordinates = dict()
 
