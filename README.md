@@ -1,11 +1,11 @@
-# Xarm6 visual servoing
+# xArm6 visual servoing
 ## Project Description
-Python project for visual servoing of a 6-DOF XARM robotic arm. An outside camera identifies two QR codes, one with the word 'robot' encoded corresponding to the arm's gripper position, and other with the word 'target' encoding, used to identify the target object's position.
+Python project for visual servoing of a 6-DOF robotic arm (xArm 6). An outside camera identifies two QR codes, one with the word 'robot' encoded corresponding to the arm's gripper position, and other with the word 'target' encoding, used to identify the target object's position.
 
 Relative position of these points of interest is determined and a trajectory is computed to make the arm reach the desired position.
 
 ## Dependencies
-This projects runs in ROS melodic. The Xarm6 developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2) must be installed in the workspace for it to run properly.
+This projects runs in ROS melodic. The xArm developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2) must be installed in the workspace for it to run properly.
 
 
 #### References
