@@ -5,8 +5,6 @@ import rospy
 import moveit_commander
 from geometry_msgs.msg import Pose, Point
 
-
-
 # Variables and constants definition
 target = Point()
 current_position = Pose()
@@ -34,7 +32,8 @@ start = Pose()
 
 ready = False
 moving = False
-# Useful functions
+
+# Useful function: target_callback
 def target_callback(msg):
     global target, current_position, ready, diferencia, moving
     if not ready or moving:
@@ -46,16 +45,13 @@ def target_callback(msg):
     target.y = current_position.position.y - movements.y/100 + 0.01
     target.z = current_position.position.z - movements.z/100 + 0.18
 
-    # print("Target point computed:")
-    # print(target.x, target.y, target.z)
-    # print()
     
 # Initialize ROS and MoveIt
 moveit_commander.roscpp_initialize(sys.argv)
 rospy.init_node('motion', anonymous=True)
 
 
-## Instantiate a `RobotCommander`_ object. Provides information such as the robot's
+## Instantiate a RobotCommander object. Provides information such as the robot's
 ## kinematic model and the robot's current joint states
 robot = moveit_commander.RobotCommander()
 
@@ -88,43 +84,23 @@ def move_xarm6():
         target_z = round(target.z, 2)
 
 
-        print("Current: ", current_x, current_y, current_z)
-        print("Diferencia: ", diferencia.x, diferencia.y, diferencia.z)
+        # print("Current: ", current_x, current_y, current_z)
+        # print("Diferencia: ", diferencia.x, diferencia.y, diferencia.z)
 
         if target_x != current_x or target_y != current_y or target_z != current_z:
-            
-            # print("Moving to target position")
-
-            # Make arm go high so it can grab stuff from upwards
-            # arm.set_pose_target([ current_x, current_y, z_up, 0.707, 0.707, 0, 0])
-            # plan = arm.plan()
-            # arm.execute(plan, wait=True) 
-
-            # Execute movement
-            # print("Moving x:", target_x)
-            # print("Moving y:", target_y)
-            # print("Moving z:", target_z)
             # Workspace limits
-
             if target_x > x_max or target_x < x_min or target_y < y_min or target_y > y_max or target_z > z_up or target_z < z_low:
                 print("Goal is outsite workspace limits")
                 print(target_x, target_y, target_z)
             else:
+                # Moving to target position
                 moving = True
-                # arm.set_pose_target([ target_x, target_y, target_z, 0.707, 0.707, 0, 0])
+
                 arm.set_pose_target([ target_x, target_y, target_z, 1, 0, 0, 0])
                 plan = arm.plan()
                 arm.execute(plan, wait=True) 
                 
                 print('Target position reached')
-                
-                # arm.set_pose_target([ target_x, target_y, target_z,  0.707, 0.707, 0, 0])
-                # plan = arm.plan()
-                # arm.execute(plan, wait=True) 
-
-                # arm.set_pose_target([ target_x, target_y, target_z, 1, 0, 0, 0])
-                # plan = arm.plan()
-                # arm.execute(plan, wait=True) 
                 
                 moving = False
         else:
@@ -140,7 +116,7 @@ if __name__ == '__main__':
     try:
         # Initial position
         print("Moving")
-        # arm.set_pose_target([origin.position.x, origin.position.y, origin.position.z, 0.707, 0.707, 0, 0])
+
         arm.set_pose_target([origin.position.x, origin.position.y, origin.position.z, 1, 0, 0, 0])
         plan = arm.plan()
         arm.execute(plan, wait=True) 
