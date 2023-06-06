@@ -28,12 +28,18 @@ target.position.z = 0
 if __name__=='__main__':
     # Open Camera
     cap = cv2.VideoCapture(0)
+
+    # Define the codec and create a VideoWriter object
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    out = cv2.VideoWriter('recorded_video.mp4', fourcc, 30.0, (640, 480))
+
+
     measurements = []
 
     try:
         while not rospy.is_shutdown():
             
-            # Read a frame from the video stream
+            # Read a frame from the video stream and write into video file
             ret, frame = cap.read()
 
             # Convert the frame to grayscale
@@ -44,6 +50,7 @@ if __name__=='__main__':
 
             # Draw qr boxes, undistort and get cooridnates
             points = process_qr(qr_codes, frame)
+            out.write(frame)
 
             # Flags
             found_target = False
@@ -116,6 +123,8 @@ if __name__=='__main__':
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
+        # Release the VideoWriter and close windows
+        out.release()
         cap.release()
         cv2.destroyAllWindows()
 

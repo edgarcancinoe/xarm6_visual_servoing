@@ -12,15 +12,15 @@ target = Point()
 current_position = Pose()
 diferencia = Point()
 
-# Workspace limmits
+# Workspace limits
 z_low = 0.02
-z_up = 0.3
+z_up = 0.5
 
-x_max = 0.4
-x_min = 0.2
+x_max = 0.7
+x_min = 0.1
 
-y_max = 0.20
-y_min = -0.20
+y_max = 0.35
+y_min = -0.35
 
 
 # Origin point values for robots frame of reference
@@ -43,8 +43,8 @@ def target_callback(msg):
     diferencia = movements
     # print("Current position: ", current_position.position)
     target.x = current_position.position.x - movements.x/100
-    target.y = current_position.position.y - movements.y/100
-    target.z = current_position.position.z - movements.z/100 + 0.1
+    target.y = current_position.position.y - movements.y/100 + 0.01
+    target.z = current_position.position.z - movements.z/100 + 0.18
 
     # print("Target point computed:")
     # print(target.x, target.y, target.z)
@@ -104,13 +104,29 @@ def move_xarm6():
             # print("Moving x:", target_x)
             # print("Moving y:", target_y)
             # print("Moving z:", target_z)
-            moving = True
-            arm.set_pose_target([ target_x, target_y, target_z, 0.707, 0.707, 0, 0])
-            plan = arm.plan()
-            arm.execute(plan, wait=True) 
-            
-            print('Target position reached')
-            moving = False
+            # Workspace limits
+
+            if target_x > x_max or target_x < x_min or target_y < y_min or target_y > y_max or target_z > z_up or target_z < z_low:
+                print("Goal is outsite workspace limits")
+                print(target_x, target_y, target_z)
+            else:
+                moving = True
+                # arm.set_pose_target([ target_x, target_y, target_z, 0.707, 0.707, 0, 0])
+                arm.set_pose_target([ target_x, target_y, target_z, 1, 0, 0, 0])
+                plan = arm.plan()
+                arm.execute(plan, wait=True) 
+                
+                print('Target position reached')
+                
+                # arm.set_pose_target([ target_x, target_y, target_z,  0.707, 0.707, 0, 0])
+                # plan = arm.plan()
+                # arm.execute(plan, wait=True) 
+
+                # arm.set_pose_target([ target_x, target_y, target_z, 1, 0, 0, 0])
+                # plan = arm.plan()
+                # arm.execute(plan, wait=True) 
+                
+                moving = False
         else:
             print("Current state is equal to goal state")
 
@@ -124,7 +140,8 @@ if __name__ == '__main__':
     try:
         # Initial position
         print("Moving")
-        arm.set_pose_target([origin.position.x, origin.position.y, origin.position.z, 0.707, 0.707, 0, 0])
+        # arm.set_pose_target([origin.position.x, origin.position.y, origin.position.z, 0.707, 0.707, 0, 0])
+        arm.set_pose_target([origin.position.x, origin.position.y, origin.position.z, 1, 0, 0, 0])
         plan = arm.plan()
         arm.execute(plan, wait=True) 
 
