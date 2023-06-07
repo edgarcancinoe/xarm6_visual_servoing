@@ -1,4 +1,4 @@
-# xArm6 visual servoing
+# Visual servoing of robotic arm
 ## Project Description
 Python project for visual servoing of a 6-DOF robotic arm (xArm 6). An external camera is used to identify two QR codes, one with the word 'robot' encoded corresponding to the arm's gripper position, and other with the word 'target' encoded, used to identify the target object's position.
 
@@ -12,6 +12,7 @@ This projects runs in ROS melodic. The xArm developer demo packages for ROS simu
 <img width="600" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
 
 ## Watch video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yTxkO5lXrIg/0.jpg)](https://youtu.be/yTxkO5lXrIg)
 https://youtu.be/yTxkO5lXrIg
 
 #### References
