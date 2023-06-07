@@ -11,7 +11,7 @@ This projects runs in ROS melodic. The xArm developer demo packages for ROS simu
 <img width="600" alt="Screenshot 2023-06-06 at 18 24 12" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/b9707baa-741d-4d1d-a557-420fe10f1a29">
 <img width="600" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
 
-### Watch the project working
+## Watch video
 https://youtu.be/yTxkO5lXrIg
 
 #### References
