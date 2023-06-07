@@ -6,6 +6,7 @@ Relative position of these points of interest is determined and a trajectory is 
 
 ## Dependencies
 This projects runs in ROS melodic. The xArm developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2) must be installed in the workspace for it to run properly.
+
 <img width="205" alt="Screenshot 2023-06-06 at 18 19 38" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/e09d9405-8c4d-4858-a219-573ea5906989">
 
 #### Video
