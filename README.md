@@ -7,12 +7,9 @@ Relative position of these points of interest is determined and a trajectory is 
 ## Dependencies
 This projects runs in ROS melodic. The xArm developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2) must be installed in the workspace for it to run properly.
 
-<img width="678" alt="Screenshot 2023-06-06 at 18 23 24" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/e7f99c60-d604-40b9-b9e3-9fe5bdd9b33a">
 <img width="648" alt="Screenshot 2023-06-06 at 18 24 12" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/b9707baa-741d-4d1d-a557-420fe10f1a29">
-<img width="677" alt="Screenshot 2023-06-06 at 18 24 41" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/44a67ab2-bcf9-4aca-8182-19208b3cd4cf">
-<img width="749" alt="Screenshot 2023-06-06 at 18 25 22" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/64f2e59b-f01c-4ec2-84dd-8aa2f1d5cf06">
-<img width="809" alt="Screenshot 2023-06-06 at 18 25 41" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/a4ef3584-e57d-4d31-915d-c139d49b0b76">
-<img width="749" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
+<img width="648" alt="Screenshot 2023-06-06 at 18 25 41" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/a4ef3584-e57d-4d31-915d-c139d49b0b76">
+<img width="648" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
 
 #### Video
 https://youtu.be/yTxkO5lXrIg
