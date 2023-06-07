@@ -5,7 +5,7 @@ Python project for visual servoing of a 6-DOF robotic arm (xArm 6). An external 
 Relative position of these points of interest is determined and a trajectory is computed and excecuted to make the arm's gripper reach the desired position.
 
 ## Dependencies
-This projects runs in ROS melodic. The xArm developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2, 3) must be installed in the workspace for it to run properly.
+This projects runs in ROS melodic. The xArm developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2)(3) must be installed in the workspace for it to run properly.
 
 ## Gallery
 <img width="480" alt="Screenshot 2023-06-06 at 18 24 12" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/b9707baa-741d-4d1d-a557-420fe10f1a29">
