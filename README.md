@@ -8,8 +8,8 @@ Relative position of these points of interest is determined and a trajectory is 
 This projects runs in ROS melodic. The xArm developer demo packages for ROS simulation were used (1), and MoveIt motion planning framework (2) must be installed in the workspace for it to run properly.
 
 ## Gallery
-<img width="480" alt="Screenshot 2023-06-06 at 18 24 12" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/b9707baa-741d-4d1d-a557-420fe10f1a29">
-<img width="480" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
+<img width="485" alt="Screenshot 2023-06-06 at 18 24 12" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/b9707baa-741d-4d1d-a557-420fe10f1a29">
+<img width="485" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
 
 ## Watch video
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yTxkO5lXrIg/0.jpg)](https://youtu.be/yTxkO5lXrIg)
@@ -18,8 +18,8 @@ This projects runs in ROS melodic. The xArm developer demo packages for ROS simu
 
 #### References
 1. [xArm ROS developer](https://github.com/xArm-Developer/xarm_ros)
-2. [MoveIt Setup](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html)
-3. [MoveIt Configuration](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html)
+2. [MoveIt Getting Started](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html)
+3. [MoveIt Setup](http://docs.ros.org/en/melodic/api/moveit_tutorials/html/index.html)
 
 #### Keywords
 computer vision, visual servoing, xarm, ros, gazebo, python
