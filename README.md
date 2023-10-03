@@ -12,16 +12,14 @@ This projects runs in ROS melodic. The xArm developer demo packages for ROS simu
 <br>
 <img width="480" alt="Screenshot 2023-06-06 at 18 26 05" src="https://github.com/edgarcancinoe/xarm6_visual_servoing/assets/59784477/54cd2a18-03af-4af1-9a6b-201438e156a4">
 
-## Watch on video
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yTxkO5lXrIg/0.jpg)](https://youtu.be/yTxkO5lXrIg)
-
-[Watch on youtube](https://youtu.be/yTxkO5lXrIg)
+## Watch it!
 
 --- 
 
 <img src="images/visualservoing.gif?raw=true"/>
 
-<small><a href="https://youtu.be/yTxkO5lXrIg">Click here to watch full video</a></small><br>
+[Watch on youtube](https://youtu.be/yTxkO5lXrIg)
+
 ---
 
 #### References
